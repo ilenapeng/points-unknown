@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mapping Citi Bike Rides</title>
+    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<!-- Blurb -->
+    <div class="text-container" style="padding-top: 20px; padding-bottom: 20px;">
+    <h1>Citi Bike Rides in September 2020 and 2021</h1>
+    <p><em>Created as part of CJS' Points Unknown Mapping class</em></p>
+
+    <p>As New Yorkers avoided public transit during the pandemic, Citi Bike ridership in March 2020 was <a href="https://nyc.streetsblog.org/2020/03/12/boom-new-citi-bike-stats-show-cycling-surge-is-real-but-mayor-is-not-acting/">up 80 percent</a> from the same time period in 2018. The increases have continued. New Yorkers made nearly 2.5 million Citi Bike trips in September 2020. 3.28 million trips were made during that same time period in 2021, after the release of the vaccine led New York City to began reopening more.</p>
+
+    <p>Citi Bike, a bike rideshare <a href="https://ride.citibikenyc.com/blog/citi-bike-is-going-to-dramatically-expand">owned by Lyft</a>, has over <a href="https://citibikenyc.com/how-it-works">25,000 bikes</a> in New York City and nearby Jersey City and Hoboken, making it the largest bike share system in the US. Cyclists can <a href="https://citibikenyc.com/how-it-works">pay by month, day or trip</a> for a short bike ride - 30 minutes for riders paying per day or trip and 45 minutes for monthly subscribers.</p>
+
+    <p>The company also expanded its locations in 2021 further north and south, extending into Brooklyn's <a href="https://ride.citibikenyc.com/blog/citi-bike-expanding-to-sunset-park-windsor-terrace-and-greenwood-heights">Sunset Park</a> and areas of the Bronx, including <a href="https://patch.com/new-york/washington-heights-inwood/citi-bike-arrives-inwood-completing-manhattan-expansion">Inwood</a>, <a href="https://twitter.com/nyc_dot/status/1354892080129204232">Morris Heights and University Heights</a>.</p>
+
+<!-- 2020 maps -->
+<h1>September 2020</h1>
+    
+<h2>
+    <span style="background: #ffff00"> 0</span> 
+    <span style="background: #5ceb6c"> 3,500</span>
+    <span style="background: #00b599"> 7,000</span>
+    <span style="background: #007691; color: white"> 10,500</span>
+    <span style="background: #002f61; color: white"> 14,000</span>
+</h2>
+<!-- 0,
+'#ffff00',
+3500,
+'#5ceb6c',
+7000,
+'#00b599',
+10500,
+'#007691',
+14000,
+'#002f61' -->
+
+    <div class="wrapper">
+        <div>
+            <p>Where trips departed from</p>
+            <div id='map'>
+            </div>
+            <script type='text/javascript' src="map.js"></script>
+        </div>
+
+        <div>
+            <p>Where trips ended</p>
+            <div id='map2'>
+            </div>
+            <script type='text/javascript' src="map2.js"></script>
+        </div>
+      </div>
+
+<!-- 2021 maps -->
+<h1>September 2021</h1>
+    <div class="wrapper">
+        <div>
+            <p>Where trips departed from</p>
+            <div id='map3'>
+            </div>
+            <script type='text/javascript' src="map3.js"></script>
+        </div>
+
+        <div>
+            <p>Where trips ended</p>
+            <div id='map4'>
+            </div>
+            <script type='text/javascript' src="map4.js"></script>
+        </div>
+    </div>
+
+<!-- Footer -->
+
+<p>Data source: <a href="https://ride.citibikenyc.com/system-data">Citi Bike</a>. My analysis and cleaned geojsons can be found on <a href="https://github.com/ilenapeng/points-unknown-data/tree/main/citibike-data">GitHub</a>.
+</div>
+
+</body>
+
+</html>

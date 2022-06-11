@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mapmaking with Mapbox</title>
+    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Blurb -->
+    <div class="text-container">
+    <h1>Mapmaking with Mapbox</h1>
+    <p>Created as part of CJS' Points Unknown Mapping class</p>
+
+    <!-- County typology map -->
+    <h2>2015 USDA County Typology Codes</h2>
+    <p>Each color corresponds to a different category of economic dependence types.</p>
+    <!-- <p>Zoom in to see county-level data</p> -->
+    </div>
+
+    <div id='map'>
+        <div class='map-overlay' id='legend'></div>
+    </div>
+    <script type='text/javascript' src="map.js"></script>
+
+    <div class="text-container" style="padding-bottom: 20px;">
+    <p>Data source: <a href="https://www.ers.usda.gov/data-products/county-typology-codes/">US Department of Agriculture</a> via the <a href="https://github.com/browninstitute/pointsunknowndata/blob/main/webmapAssignmentDataset/countyTypologyCodes.geojson">Brown Institute</a></p>
+    </div>
+
+    <!-- Police brutality map -->
+    <div class="text-container">
+    <h2>2020 Police Brutality Incidents in the U.S.</h2>
+    <p>Each point is one reported incident. Click on each point to read more details.</p>
+    </div>
+
+    <div id='map2'>
+    </div>
+    <script type='text/javascript' src="map2.js"></script>
+
+    <div class="text-container" style="padding-bottom: 20px;">
+    <p>Data source: <a href="https://github.com/2020PB/police-brutality">2020PoliceBrutality</a> via <a href="https://github.com/browninstitute/pointsunknowndata/tree/main/webmapAssignmentDataset">The Brown Institute</a></p>
+    </div>
+
+</body>
+
+</html>
