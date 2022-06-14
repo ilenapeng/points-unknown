@@ -57,7 +57,7 @@ map4.on('click', 'map_points', function (e) {
   var tripCount = e.features[0].properties.trip_count.toLocaleString();
   new mapboxgl.Popup()
       .setLngLat(e.lngLat)
-      .setHTML('<h2>' + tripCount + ' trips started at ' + stationName + '</h2>'
+      .setHTML('<h2>' + tripCount + ' trips ended at ' + stationName + '</h2>'
           )
       .addTo(map4);
 });
