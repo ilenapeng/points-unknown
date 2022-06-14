@@ -22,7 +22,10 @@ map.on("load", function () {
         data: "https://raw.githubusercontent.com/ilenapeng/points-unknown-data/main/citibike-data/citibikeData_09_20_starts.geojson",
       },
       paint: {
+
+        // this is how you would scale the radius just based on trip count, without accounting for zoom levels
         'circle-radius': 3,
+        // static circle color
         // "circle-color": '#26547C',
         "circle-stroke-color": "#ffffff",
         "circle-stroke-width": 0.5,
