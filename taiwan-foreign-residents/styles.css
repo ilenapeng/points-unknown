@@ -16,7 +16,7 @@ h2 {
     letter-spacing: 1px;
 }
 
-p {
+.text-container p {
     font-weight: 300;
     letter-spacing: 1px;
     line-height: 2rem;

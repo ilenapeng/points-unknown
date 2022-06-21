@@ -73,8 +73,6 @@ map.on("load", function () {
     'id': 'hillshading',
     'source': 'dem',
     'type': 'hillshade'
-    // insert below waterway-river-canal-shadow;
-    // where hillshading sits in the Mapbox Outdoors style
     },
     'building'
     );
@@ -83,16 +81,29 @@ map.on("load", function () {
 // Create the popup
 map.on('click', 'tw_boundaries', function (e) {
     var localityName = e.features[0].properties.locality;
-    var popCount = e.features[0].properties.pop_difference.toLocaleString();
+    var direction = increaseDecrease(e.features[0].properties['pop_difference']);
+    // take the absolute value to remove the negative signs and then convert to locale string to get commas
+    var popCount = Math.abs(e.features[0].properties.pop_difference).toLocaleString();
 
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
         .setHTML(
           '<h2>' + localityName + '</h2>' +
-          '<p>' + 'The population changed by ' + popCount + ' people' + '</p>'
+          '<p>' + 'The population ' + direction + popCount + ' people' + '</p>'
           )
         .addTo(map);
 });
+
+// function for conditional popup tooltip
+function increaseDecrease(d) {
+  if (d > 0) {
+      return "increased by "
+  }
+  else {
+      return "decreased by "
+  }
+}
+
 // Change the cursor to a pointer when the mouse is over the tw_boundaries layer.
 map.on('mouseenter', 'tw_boundaries', function () {
     map.getCanvas().style.cursor = 'pointer';
