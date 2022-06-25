@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mapping Wildfire Burn Probability</title>
+    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Blurb -->
+    <div class="text-container" style="padding-top: 20px;">
+    <h1>Mapping burn probability in U.S. counties</h1>
+    <em>
+        <p>Created as part of CJS' Points Unknown Mapping class</p>
+        <p>This assignment involved experimenting with different ways of classifying data in maps and then selecting one that we felt made the most sense. I decided to use natural breaks for my final map. The code for the other maps I tried, which were visualized in Altair, can be found on <a href="https://github.com/ilenapeng/points-unknown-data/tree/main/wildfire-risk">GitHub</a>.</p>
+        <p>These maps were also primarily exploratory — so while I did do research while making and explaining them, they weren't vetted by scientists and shouldn't be interpreted as scientific visualizations.</p>
+    </em>
+
+    <p>Burn probability shows the chance that a wildfire will occur in a given point — usually a single grid cell / pixel — in a year. 
+        The number is calculated through wildfire simulations, which account for factors like topography, weather and fuel for a fire, 
+        such that a burn probability of 0.001 means that the area burned 1 out of 1,000 times in the simulation, according to a 2013 report from the <a href="https://www.fs.fed.us/rm/pubs/rmrs_gtr315.pdf">United States Department of Agriculture / Forest Service</a> and <a href="https://iftdss.firenet.gov/firenetHelp/help/pageHelp/content/20-models/lbp/out/burnprob.htm">the Interagency Fuels Treatment Decision Support System</a>. 
+    </p>
+
+    <p>This map displays the average burn probability of the single grid cells in each county. These probabilities, which are often small, are communicated in this map as a ratio, as suggested by the 2013 USDA/FS report. A burn probability of 0.001 is 1 burning pixel to 1,000 simulations, or a 1 in 1,000 chance of fire.
+    </p>
+
+    <p>Click on a county to view the mean burn probability, or the average annual chance of a fire occurring in a single grid cell in that county.</p>
+    </div>
+
+    <div id='map'>
+        <div class='map-overlay' id='legend'>
+            <b>Chance of fire out of 1,000</b>
+        </div>
+    </div>
+    <script type='text/javascript' src="map.js"></script>
+
+    <div class="text-container" style="padding-bottom: 20px;">
+    <p>Data source: U.S. Forest Services's <a href="https://wildfirerisk.org/download/">Wildfire Risk to Communities</a> project via <a href="https://brown-institute-assets.s3.amazonaws.com/Objects/pointsunknown/WildfireRiskToCommunities_County_Summary_2020-03-31.xlsx">The Brown Institute</a>. All code is available on <a href="https://github.com/ilenapeng/points-unknown-data/tree/main/wildfire-risk">GitHub</a>.</p>
+    </div>
+
+</body>
+
+</html>

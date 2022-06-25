@@ -4,13 +4,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    color: #018571;
 }
 
 h1 {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight:500;
+    color: #F14A41;
 }
 
 h2 {
@@ -23,7 +23,7 @@ h2 {
     line-height: 2rem;
 }
 
-a, a:visited {color: #018571;}
+a, a:visited {color: #F14A41;}
 
 .text-container {
     max-width: 90%; 
@@ -36,18 +36,26 @@ a, a:visited {color: #018571;}
     margin: 5em auto;
 }
 
-.mapboxgl-popup-content {width:250px;}
+#map2 {
+    width: 90%;
+    height: 600px;
+    margin: 5em auto;
+}
 
-/* .mapboxgl-popup-content h4 {
+.mapboxgl-popup-content {
+    max-height:300px;
+    overflow-y: scroll;
+    }
+
+.mapboxgl-popup-content h4 {
     font-weight: 300;
-    font-size: 0.9em;
-    border-width: 0px 0px 0.5px 0px;
+    font-size: 1.5em;
+    /* border-width: 0px 0px 0.5px 0px;
     border-style: solid;
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(80, 80, 80); */
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-} */
-
+}
 .mapboxgl-popup-content h2 {
     font-weight: 500;
     margin-top: 0.5em;
@@ -87,7 +95,7 @@ padding: 10px;
 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 line-height: 18px;
 margin-bottom: 40px;
-width: 70px;
+width: 190px;
 }
 
 .legend-key {
