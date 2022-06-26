@@ -15,7 +15,7 @@ map.on("load", function () {
           type: "line",
           source: {
             type: "geojson",
-            data: "https://raw.githubusercontent.com/ilenapeng/points-unknown-data/main/wildfire-risk/burn-probability.geojson",
+            data: "https://raw.githubusercontent.com/ilenapeng/points-unknown-data/main/wildfire-risk/burn-probability-counties.geojson",
           },
           paint: {
             "line-color": "#F7C384",
@@ -30,7 +30,7 @@ map.on("load", function () {
       type: "fill",
       source: {
         type: "geojson",
-        data: "https://raw.githubusercontent.com/ilenapeng/points-unknown-data/main/wildfire-risk/burn-probability.geojson",
+        data: "https://raw.githubusercontent.com/ilenapeng/points-unknown-data/main/wildfire-risk/burn-probability-counties.geojson",
       },
       // maxzoom: 6,
 
