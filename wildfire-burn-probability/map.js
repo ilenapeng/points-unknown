@@ -2,10 +2,16 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiaWxlbmFwIiwiYSI6ImNsNHJ3Y29neDBvZXczY3FuaTV6M
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/ilenap/cl4t1vo0r001u14lapbt1ic5u',
-    zoom: 3.5,
+    zoom: 3,
     maxZoom: 6,
     minZoom: 3,
-    center: [-98.5795, 37.2283]
+    center: [-98.5795, 37.2283],
+    maxBounds: [
+      // Southwest
+      [-151.762363, 24.056797],
+      // Northeast
+      [-47.844421, 50.934196]
+    ],
 });
 
 map.on("load", function () {

@@ -7,7 +7,11 @@ var map = new mapboxgl.Map({
     maxZoom: 9,
     minZoom: 3,
     // the point he gave was -85.5, 37.7 for zooming in on Kentucky
-    center: [-98.5795, 37.2283]
+    center: [-98.5795, 37.2283],
+    maxBounds: [
+      [-180, 15],
+      [-30, 72],
+    ],
 });
 
 // .on "load" adds the layer AFTER the base map loads

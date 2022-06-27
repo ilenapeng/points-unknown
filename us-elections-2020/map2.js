@@ -9,8 +9,10 @@ var map2 = new mapboxgl.Map({
     // the point he gave was -85.5, 37.7 for zooming in on Kentucky
     center: [-98.5795, 37.2283],
     maxBounds: [
-      [-180, 15],
-      [-30, 72],
+      // Southwest
+      [-151.762363, 24.056797],
+      // Northeast
+      [-47.844421, 50.934196]
     ],
     projection: 'albers',
 });

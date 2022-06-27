@@ -5,7 +5,13 @@ var map = new mapboxgl.Map({
     zoom: 3.5,
     maxZoom: 9,
     minZoom: 3,
-    center: [-98.5795, 37.2283]
+    center: [-98.5795, 37.2283],
+    maxBounds: [
+      // Southwest
+      [138.762363, 24.056797],
+      // Northeast
+      [47.844421, 50.934196]
+    ],
 });
 
 map.on("load", function () {
