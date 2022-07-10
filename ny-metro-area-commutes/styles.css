@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight:500;
+    color: #164F6C;
+}
+
+/* using this one for the tooltip */
+h2 {
+    letter-spacing: 1px;
+}
+
+p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    color: black
+}
+
+a, a:visited {color: black;}
+
+.text-container {
+    max-width: 90%; 
+    margin: 0 auto
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+    margin: 5em auto;
+}
+
+.mapboxgl-popup-content {
+    width:350px;
+    max-height:300px;
+    overflow-y: scroll;
+    }
+
+.mapboxgl-popup-content .grid {
+    display: flex;
+  }
+  
+.mapboxgl-popup-content .column {
+    flex: 50%;
+  }
+
+.mapboxgl-popup-content h4 {
+    font-weight: 300;
+    font-size: 1.4em;
+    /* border-width: 0px 0px 0.5px 0px;
+    border-style: solid;
+    border-color: rgb(80, 80, 80); */
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.mapboxgl-popup-content h2 {
+    font-weight: 500;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+}
+.mapboxgl-popup-content p {
+    font-weight: 300;
+    font-size: 1em;
+    margin-top: 0.3em;
+    margin-bottom: 0em;
+    line-height: 1em;
+}
+
+.legend div span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-left: 5px;
+    width: 7px;
+}
+
+.legend hr {
+    border-top: .2em dashed #404040;
+    border-bottom: 0em;
+    margin-top: .75em;
+    margin-bottom: .75em;
+}
+
+.legend {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1em;
+    overflow: auto;
+    border-radius: 3px;
+    z-index:1;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 18px;
+    margin-bottom: 40px;
+    max-width: 300px;
+}
+
+.legend div span {
+border-radius: 0%;
+display: inline-block;
+height: 10px;
+margin-top: 0px;
+margin-right: 0px;
+margin-left: 0px;
+width: 20px;
+}
+
+.legend-text span{
+border-radius: 0%;
+display: inline-block;
+height: 10px;
+margin-top: 0px;
+margin-right: 5px;
+margin-left: 0px;
+width: 20px;
+}

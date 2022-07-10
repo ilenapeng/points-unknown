@@ -4,13 +4,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    color: #018571;
 }
 
 h1 {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight:500;
+    color: #018571;
 }
 
 h2 {

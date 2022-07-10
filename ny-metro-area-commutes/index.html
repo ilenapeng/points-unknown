@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Commutes in the NY metro area</title>
+    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<!-- Blurb -->
+<div class="text-container" style="padding-top: 20px; padding-bottom: 20px;">
+<h1>Commutes in the New York Metropolitan Area</h1>
+<p><em>Created as part of Columbia Journalism School's Points Unknown Mapping class</em></p>
+
+<p>
+    Manhattanites, living in the core of the NY-NJ-PA Metropolitan Statistical Area, had some of the shorter commutes in the region. The most common duration for a commute was roughly 30 minutes, according to U.S. Census data.
+
+    In every other borough of New York City - the Bronx, Brooklyn, Queens, Staten Island - about 20% of residents said their commute took longer than an hour. In the Bronx, a full quarter of residents said their commutes lasted an hour to an hour and a half.
+
+</p>
+
+<p>
+    The counties surrounding New York City, like Putnam and Nassau Counties in New York and Bergen County in New Jersey, had similarly long commutes.
+
+    Counties that were the furthest away from New York City also had extremely long commutes. Almost 17% and 15% of residents in Pike and Monroe counties respectively reported a commute that was longer than an hour and a half.
+</p>
+
+<p>
+    The remainder of the region had shorter commutes. In New Jersey's Orange County, nearly half of residents reported a commute shorter than 25 minutes.
+</p>
+
+<p>
+    Click on the map to view more details about commute times in each county.
+</p>
+
+<div>
+    <div id='map'>
+        <div class="legend">
+            <div>
+                <p>
+                    <span style="background-color: #83D0CB"></span>
+                    <span style="background-color: #78C3C1"></span>
+                    <span style="background-color: #6DB6B8"></span>
+                    <span style="background-color: #62A9AE"></span>
+                    <span style="background-color: #579CA5"></span>
+                    <span style="background-color: #4C8F9B"></span>
+                    <span style="background-color: #428392"></span>
+                    <span style="background-color: #377688"></span>
+                    <span style="background-color: #2C697F"></span>
+                    <span style="background-color: #215C75"></span>
+                    <span style="background-color: #164F6C"></span>
+                    <span style="background-color: #0B4262"></span>
+                </p>
+            </div>
+            <div class="legend-key">
+                <p>
+                    <span>&#60;5</span>
+                    <span>5</span>
+                    <span>10</span>
+                    <span>15</span>
+                    <span>20</span>
+                    <span>25</span>
+                    <span>30</span>
+                    <span>35</span>
+                    <span>40</span>
+                    <span>45</span>
+                    <span>60</span>
+                    <span>&#62;90</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src="map.js"></script>
+</div>
+
+<!-- Footer -->
+
+<p>Data source: <a href="https://censusreporter.org/tables/B08303/">Table B08303 from the U.S. Census Bureau, American Community 5-Year Survey, 2010 and 2020</a>. My analysis and cleaned geojsons can be found on <a href="https://github.com/ilenapeng/points-unknown-data/tree/main/ny-metro-area-commutes">GitHub</a>.
+
+<p><b><a href="https://ilenapeng.github.io/points-unknown">Return to the Points Unknown homepage</a></b></p>
+
+</div>
+
+</body>
+
+</html>

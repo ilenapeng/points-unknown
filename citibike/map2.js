@@ -19,7 +19,7 @@ map2.on("load", function () {
       type: "circle",
       source: {
         type: "geojson",
-        data: "https://raw.githubusercontent.com/ilenapeng/points-unknown-data/main/citibike-data/citibikeData_09_20_ends.geojson",
+        data: "https://raw.githubusercontent.com/ilenapeng/points-unknown-data/main/citibike/citibikeData_09_20_ends.geojson",
       },
       paint: {
         'circle-radius': 3,
