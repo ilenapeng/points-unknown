@@ -1,7 +1,7 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiaWxlbmFwIiwiYSI6ImNsNWNqdzR1YjAza3czY214b3c4bGN1N3UifQ.KKwG0ddN4dze8CI748fyeA';
+mapboxgl.accessToken = 'pk.eyJ1IjoiaWxlbmFwIiwiYSI6ImNsNzB0a3p4cTBocDgzcHBiNHZjeXlvcnoifQ.awTvOy9l9w5PA_LxW45ARA';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/ilenap/cl5cjpc09002l14n65471eti3',
+    style: 'mapbox://styles/ilenap/cl70thw5w000i14nu5627zxkn',
     zoom: 6.5,
     maxZoom: 12,
     minZoom: 6.5,
@@ -11,7 +11,11 @@ var map = new mapboxgl.Map({
       [-78.570198, 38.706095],
       // Northeast
       [-68.626003, 42.456842]
-    ]
+    ],
+    projection: {
+      'name': 'albers',       
+      center: [-73.949, 40.752],
+      parallels: [30, 40]}
 });
 
 map.on("load", function () {
